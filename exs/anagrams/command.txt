@@ -1,0 +1,4 @@
+iex anagrams.exs
+
+iex --sname one anagrams_dict.exs
+iex --sname two anagrams_dict.exs
