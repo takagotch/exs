@@ -54,6 +54,23 @@ mix test
 iex
 
 :crypto.hash(:md5, "Using crypto from Erlang OTP")
+
+
+git clone git://github.com/elixir-lang/ex_doc.git
+cd ex_doc && ../elixir/bin/mix do deps.get, compile
+
+make docs
+make docs DOCS_FORMAT=epub
+
+bin/elixir lib/elixir/lib/string.ex -o lib/elixir/ebin
+bin/elixir lib/elixir/test/elixir/string_test.exs
+
+make compile
+make clean_elixir compile
+
+git clone https://github.com/elixir-lang/elixir.git
+cd elixir
+make clean test
 ```
 
 ```
